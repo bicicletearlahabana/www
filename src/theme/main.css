@@ -1,0 +1,242 @@
+:root {
+    --theme-blue: #0066CC;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.centered {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+header, #top-banner {
+    background: var(--theme-blue, #0066CC);
+    height: 100vh;
+    position: relative;
+    width: 50%;
+}
+
+header {
+    float: right;
+}
+
+header > div {
+    background-image: linear-gradient(to bottom, white, white), linear-gradient(to bottom, white, white);
+    background-position: 100% 0, 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 50% 30px;
+    /*height: 100%;*/
+    width: 100%;
+}
+
+header nav, header ul {
+    background: white;
+    border-radius: 50%;
+}
+
+header nav {
+    height: 360px;
+    width: 360px;
+}
+
+header li {
+    font-weight: bolder;
+}
+
+header a {
+    display: inline-block;
+    height: 1.8em;
+    padding: 0.2em 0.5em;
+    transition: all 0.3s;
+}
+
+header a:hover, header a:focus {
+    background: var(--theme-blue);
+    color: white;
+    font-size: 1.4em;
+}
+
+header ul {
+    border: 4px solid var(--theme-blue);
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+}
+
+#top-banner {
+    padding: 1em;
+}
+
+#top-banner > div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3 > span {
+    border-bottom: 2px solid var(--theme-blue);
+    display: inline-block;
+}
+
+#next-dates li:first-child {
+    font-size: 130%;
+}
+
+#next-dates li:nth-child(2) {
+    opacity: 0.85;
+}
+
+#next-dates li:nth-child(3) {
+    font-size: 80%;
+    opacity: 0.60;
+}
+
+.header-container {
+    background-image: linear-gradient(to right, var(--theme-blue), transparent);
+    background-position: 0 50%;
+    background-size: 100% 4px;
+    background-repeat: no-repeat;
+}
+
+.header-container > span {
+    background: white;
+    display: inline-block;
+    margin-left: 2em;
+    padding: 0 2em;
+}
+
+#top-banner {
+    color: white;
+    /*overflow: hidden;*/
+}
+
+#hora-y-lugar h2, #hora-y-lugar h3, #top-banner p {
+    margin: 0.6em 0;
+}
+
+section:not(#hora-y-lugar) strong {
+    color: var(--theme-blue);
+    font-weight: bold;
+}
+
+section:not(#hora-y-lugar) p {
+    font-weight: lighter;
+    margin: 2em 0;
+    /*max-width: 45rem;*/
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+section:not(#hora-y-lugar) > div:first-child {
+    width: 45rem;
+}
+
+section:not(#hora-y-lugar) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:not(#hora-y-lugar) a {
+    color: #ff723f;
+    padding: 0 0.2em;
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+
+section:not(#hora-y-lugar) a:hover, #section:not(#hora-y-lugar) a:focus {
+    background: #ff723f;
+    color: white;
+}
+
+#mas-iniciativas-en-bicicleta li:before {
+    content: '→ ';
+    color: var(--theme-blue);
+}
+
+#mas-iniciativas-en-bicicleta li > span:before {
+    content: ' - ';
+}
+
+.bicycle {
+    --translate: 0;
+    position: absolute;
+    left: -2em;
+    bottom: 0;
+    width: 2em;
+    height: 2em;
+    fill: white;
+    stroke: white;
+    transform: translateX(calc(var(--translate) * 1px));
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+aside li {
+    padding: 0 0.2em;
+}
+
+footer {
+    align-items: center;
+    background-color: #464646;
+    color: #dedede;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8em;
+    padding: 0.5em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: underline;
+}

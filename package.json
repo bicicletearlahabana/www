@@ -1,25 +1,29 @@
 {
-  "name": "www",
+  "name": "bicicletear-lahabana",
   "version": "1.0.0",
-  "description": "Hello yasser",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./index.js"
+    "build:clean": "rm -r ./dist && mkdir -p ./dist/theme ./dist/js",
+    "build:pages": "node ./scripts/build-pages.js",
+    "build:theme": "node ./scripts/build-theme.js",
+    "build:js": "node ./scripts/build-script.js",
+    "build:assets": "cp -r ./src/assets/ ./dist/assets/",
+    "build": "npm run build:clean && npm run build:assets && npm run build:js && npm run build:theme && npm run build:pages"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bicicletearlahabana/www.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Laurent Renard",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bicicletearlahabana/www/issues"
   },
   "homepage": "https://github.com/bicicletearlahabana/www#readme",
   "devDependencies": {
-    "jstransformer-pug": "^0.3.0",
-    "metalsmith": "^2.3.0",
-    "metalsmith-layouts": "^2.1.0",
-    "metalsmith-markdown": "^0.2.2"
+    "postcss": "^6.0.22",
+    "postcss-import": "^11.1.0",
+    "pug": "^2.0.3"
   }
 }

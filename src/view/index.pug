@@ -1,0 +1,64 @@
+include  mixins
+
+html(lang="es")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title Bicicletear La Habana - Masa crítica de La Habana
+        link(href='https://fonts.googleapis.com/css?family=Poppins:400,500,700', rel='stylesheet')
+        link(href='./theme/main.css', type='text/css' rel='stylesheet')
+        script(src='./js/main.js', async=true)
+    body
+        header.centered
+            div.centered
+                nav.centered
+                    ul.centered
+                        li
+                            a(href="#conceptos") Conceptos
+                        li
+                            a(href="#pomocion") Promoción
+                        li
+                            a(href="#apoyo-local") Apoyo Local
+                        li
+                            a(href="#mas-iniciativas-en-bicicleta") Más iniciativas
+        main
+            div#top-banner.centered
+                div
+                    h1 #BicicletearLaHabana
+                    p
+                        strong Masa crítica
+                        |  de La Habana
+                    section#hora-y-lugar
+                        h2 Hora y lugar
+                        p
+                            |   Primer domingo/mes en el Parque de los Mártires Universitarios (San Lázaro e Infanta, Centro Habana)
+                            |   a las 4:00 PM (5:00 PM en horario de ahorro, abril - noviembre)
+                        ol#next-dates
+                        aside.centered
+                            nav
+                                ul.centered
+                                    li
+                                        a(href='https://facebook.com/groups/bicicleterosblh')
+                                            span.visually-hidden Facebook
+                                            img(src='./assets/facebook-logo-button.svg' alt='facebook logo button', aria-hidden='true')
+                                    li
+                                        a(href='https://www.instagram.com/bicicletearlahabana/')
+                                            span.visually-hidden Instagram
+                                            img(src='./assets/instagram-logo.svg' alt='instagram logo button', aria-hidden='true')
+            section#conceptos
+                div
+                    +sectionHeader('Conceptos')
+                    include concepts
+            section#pomocion
+                div
+                    +sectionHeader('Promoción')
+                    include promotion
+            section#apoyo-local
+                div
+                    +sectionHeader('Apoyo local')
+                    include local-help
+            section#mas-iniciativas-en-bicicleta
+                div
+                    +sectionHeader('Más iniciativas en bicicleta')
+                    include other-initiatives
+        include footer
