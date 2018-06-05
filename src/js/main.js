@@ -398,9 +398,10 @@
     fragment.appendChild(b);
   }
   s1.appendChild(fragment);
-  const windowWidth = window.screen.availWidth;
+  const [body] = document.getElementsByTagName('body');
   const animate = (el, duration = 4000) => {
     let start = null;
+    const windowWidth = body.offsetWidth;
     const step = timestamp => {
       if (!start) start = timestamp;
       const progress = (timestamp - start) / duration;
